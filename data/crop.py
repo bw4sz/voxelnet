@@ -79,10 +79,14 @@ def align_img_and_pc(img_dir, pc_dir, calib_dir):
     return points
 
 # update the following directories
-IMG_ROOT = '/media/hdc/KITTI/image/training/image_2/'
-PC_ROOT = '/media/hdc/KITTI/point_cloud/raw_bin_files/training/velodyne/'
-CALIB_ROOT = '/media/hdc/KITTI/calib/data_object_calib/training/calib/'
+#IMG_ROOT = '/media/hdc/KITTI/image/training/image_2/'
+IMG_ROOT = '/ufrc/ewhite/b.weinstein/training/image_2/'
 
+#PC_ROOT = '/media/hdc/KITTI/point_cloud/raw_bin_files/training/velodyne/'
+PC_ROOT = '/ufrc/ewhite/b.weinstein/training/velodyne'
+
+#CALIB_ROOT = '/media/hdc/KITTI/calib/data_object_calib/training/calib/'
+CALIB_ROOT = '/ufrc/ewhite/b.weinstein/training/calib'
 
 
 for frame in range(0, 7481):

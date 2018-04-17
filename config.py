@@ -18,7 +18,7 @@ __C = edict()
 cfg = __C
 
 # for dataset dir
-__C.DATA_DIR = '/ufrc/ewhite/b.weinstein/voxelnet_split/training/'
+__C.DATA_DIR = '/ufrc/ewhite/b.weinstein/voxelnet_split/'
 __C.CALIB_DIR = '/ufrc/ewhite/b.weinstein/training/calib'
 
 

@@ -18,8 +18,8 @@ __C = edict()
 cfg = __C
 
 # for dataset dir
-__C.DATA_DIR = '/media/hdc/KITTI/for_voxelnet/cropped_dataset'
-__C.CALIB_DIR = '/media/hdc/KITTI/calib/data_object_calib/training/calib'
+__C.DATA_DIR = '/ufrc/ewhite/b.weinstein/training/velodyne/'
+__C.CALIB_DIR = '/ufrc/ewhite/b.weinstein/training/calib'
 
 
 # for gpu allocation

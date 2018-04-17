@@ -27,10 +27,12 @@ for index,row in train.iterrows():
             copyfile(original_directory + f,destination_directory+f)
     
 for index,row in validation.iterrows():
-    pc="testing/velodyne/%s.bin" % row.filename
-    im="testing/image_2/%s.png" % row.filename
-    label="testing/label_2/%s.txt" % row.filename
+    pc="training/velodyne/%s.bin" % row.filename
+    im="training/image_2/%s.png" % row.filename
+    label="training/label_2/%s.txt" % row.filename
     
     for f in [pc,im,label]:
-        if not os.path.exists(destination_directory+f):
-            copyfile(original_directory + f,destination_directory+f)
+        #validation dir name
+        x=f.replace("training","testing")
+        if not os.path.exists(destination_directory+x):
+            copyfile(original_directory + f,destination_directory+x)

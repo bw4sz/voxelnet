@@ -14,9 +14,11 @@
 #SBATCH --partition=hpg2-gpu
 #SBATCH --gres=gpu:tesla:1
 
-#activate conda environmentthing
+#activate conda environment
 source activate voxelnet
 
-python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --vis
+python -c "import tensorflow;print(tensorflow.__version__)"
+
+#python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --vis
 
 date

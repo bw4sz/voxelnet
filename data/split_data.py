@@ -1,3 +1,7 @@
+'''
+File to mimic structure of training and testing data of the voxelnet repo. File takes in text files listing the point clouds and splits the data into testing and training data.
+'''
+
 import pandas
 from shutil import copyfile
 

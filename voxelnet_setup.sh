@@ -6,7 +6,7 @@ conda install -c menpo opencv
 conda install -c anaconda cython
 conda install Pillow
 conda install pandas
-conda install -c conda-forge tensorflow
+conda install -c anaconda tensorflow-gpu
 conda install matplotlib
 conda install -c conda-forge jupyterlab
 

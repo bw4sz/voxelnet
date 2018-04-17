@@ -10,9 +10,12 @@
 #SBATCH --time=12:00:00       #Time limit hrs:min:sec
 #SBATCH --output=/home/b.weinstein/logs/tensorboard.out   # Standard output and error log
 #SBATCH --error=/home/b.weinstein/logs/tensorboard.err
+ 
+ml tensorflow
 
-source activate voxelnet
+launch_tensorflow -c "import tensorflow;print(tensorflow.__version__)"
 
-#python -c "import tensorflow;print(tensorflow.__version__)"
-
-tensorboard --logdir /home/b.weinstein/voxelnet/log --port 8888
+port=$(shuf -i 20000-30000 -n 1)
+echo -e "\nSSH tunnel command: ssh -NL 8080:$(hostname):${port} ${USER}@hpg2.rc.ufl.edu"
+echo -e "\nLocal URI: http://localhost:8080"
+tensorboard --logdir /home/b.weinstein/voxelnet/log

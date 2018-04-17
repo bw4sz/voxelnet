@@ -1,3 +1,4 @@
+]
 #!/usr/bin/env python
 # -*- coding:UTF-8 -*-
 
@@ -18,7 +19,7 @@ __C = edict()
 cfg = __C
 
 # for dataset dir
-__C.DATA_DIR = '/ufrc/ewhite/b.weinstein/training/velodyne/'
+__C.DATA_DIR = '/ufrc/ewhite/b.weinstein/voxelnet_split/training/'
 __C.CALIB_DIR = '/ufrc/ewhite/b.weinstein/training/calib'
 
 

@@ -19,6 +19,6 @@ source activate voxelnet
 
 python -c "import tensorflow;print(tensorflow.__version__)"
 
-#python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --vis
+python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --vis
 
 date

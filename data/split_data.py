@@ -27,9 +27,9 @@ for index,row in train.iterrows():
             copyfile(original_directory + f,destination_directory+f)
     
 for index,row in validation.iterrows():
-    pc="validation/velodyne/%s.bin" % row.filename
-    im="validation/image_2/%s.png" % row.filename
-    label="validation/label_2/%s.txt" % row.filename
+    pc="testing/velodyne/%s.bin" % row.filename
+    im="testing/image_2/%s.png" % row.filename
+    label="testing/label_2/%s.txt" % row.filename
     
     for f in [pc,im,label]:
         if not os.path.exists(destination_directory+f):

@@ -13,6 +13,6 @@
 
 source activate voxelnet
 
-python -c "import tensorflow;print(tensorflow.__version__)"
+#python -c "import tensorflow;print(tensorflow.__version__)"
 
-#tensorboard --logdir /home/b.weinstein/voxelnet/log
+tensorboard --logdir /home/b.weinstein/voxelnet/log --port 8888

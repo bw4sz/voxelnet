@@ -5,8 +5,8 @@ File to mimic structure of training and testing data of the voxelnet repo. File 
 import pandas
 from shutil import copyfile
 
-train=pandas.read_table("/ImageSets/train.txt",header=None,dtype="str")
-validation=pandas.read_table("/ImageSets/val.txt",header=None,dtype="str")
+train=pandas.read_table("ImageSets/train.txt",header=None,dtype="str")
+validation=pandas.read_table("ImageSets/val.txt",header=None,dtype="str")
 
 train.columns= ["filename"]
 validation.columns= ["filename"]

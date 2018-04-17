@@ -10,7 +10,7 @@
 #SBATCH --output=/home/b.weinstein/logs/Voxelnet.out   # Standard output and error log
 #SBATCH --error=/home/b.weinstein/logs/Voxelnet.err
 #SBATCH --distribution=cyclic:cyclic
-#SBATCH --mem-per-cpu=2000
+#SBATCH --mem-per-cpu=5000
 #SBATCH --partition=hpg2-gpu
 #SBATCH --gres=gpu:tesla:1
 

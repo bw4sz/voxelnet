@@ -4,6 +4,7 @@ File to mimic structure of training and testing data of the voxelnet repo. File 
 
 import pandas
 from shutil import copyfile
+import os
 
 train=pandas.read_table("ImageSets/train.txt",header=None,dtype="str")
 validation=pandas.read_table("ImageSets/val.txt",header=None,dtype="str")
@@ -22,7 +23,8 @@ for index,row in train.iterrows():
     label="training/label_2/%s.txt" % row.filename
     
     for f in [pc,im,label]:
-        copyfile(original_directory + f,destination_directory+f)
+        if not os.path.exists(destination_directory+f):
+            copyfile(original_directory + f,destination_directory+f)
     
 for index,row in validation.iterrows():
     pc="validation/velodyne/%s.bin" % row.filename
@@ -30,4 +32,5 @@ for index,row in validation.iterrows():
     label="validation/label_2/%s.txt" % row.filename
     
     for f in [pc,im,label]:
-        copyfile(original_directory + f,destination_directory+f)    
+        if not os.path.exists(destination_directory+f):
+            copyfile(original_directory + f,destination_directory+f)

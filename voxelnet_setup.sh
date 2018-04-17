@@ -1,11 +1,13 @@
 conda create -n voxelnet python=3.6
 source activate voxelnet
 conda install numpy
-conda install numba shapely tensorflow scipy
+conda install numba shapely scipy
 conda install -c menpo opencv
 conda install -c anaconda cython
 conda install Pillow
 conda install pandas
+conda install -c conda-forge tensorflow
+conda install matplotlib
 
 #edited the setup.py to capture numpy array
 python3 setup.py build_ext --inplace

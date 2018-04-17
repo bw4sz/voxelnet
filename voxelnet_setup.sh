@@ -8,6 +8,7 @@ conda install Pillow
 conda install pandas
 conda install -c conda-forge tensorflow
 conda install matplotlib
+conda install -c conda-forge jupyterlab
 
 #edited the setup.py to capture numpy array
 python3 setup.py build_ext --inplace

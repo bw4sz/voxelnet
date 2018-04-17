@@ -11,6 +11,8 @@
 #SBATCH --output=/home/b.weinstein/logs/tensorboard.out   # Standard output and error log
 #SBATCH --error=/home/b.weinstein/logs/tensorboard.err
 
-source activate tensorflow
+source activate voxelnet
 
-tensorboard --logdir /home/b.weinstein/voxelnet/log
+python -c "import tensorflow;print(tensorflow.__version__)"
+
+#tensorboard --logdir /home/b.weinstein/voxelnet/log

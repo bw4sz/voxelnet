@@ -16,4 +16,4 @@ ml tensorflow
 port=$(shuf -i 20000-30000 -n 1)
 echo -e "\nSSH tunnel command: ssh -NL 8080:$(hostname):${port} ${USER}@hpg2.rc.ufl.edu"
 echo -e "\nLocal URI: http://localhost:8080"
-launch_tensorflow tensorboard --logdir /home/b.weinstein/voxelnet/log
+launch_tensorflow tensorboard --logdir /home/b.weinstein/voxelnet/log --port ${port}

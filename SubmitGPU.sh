@@ -10,15 +10,15 @@
 #SBATCH --output=/home/b.weinstein/logs/Voxelnet.out   # Standard output and error log
 #SBATCH --error=/home/b.weinstein/logs/Voxelnet.err
 #SBATCH --distribution=cyclic:cyclic
-#SBATCH --mem-per-cpu=2000
+#SBATCH --mem-per-cpu=7000
 #SBATCH --partition=hpg2-gpu
 #SBATCH --gres=gpu:tesla:1
 
 #activate conda environment
 source activate voxelnet
 
-python -c "import tensorflow;print(tensorflow.__version__)"
+#python -c "import tensorflow;print(tensorflow.__version__)"
 
-#python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --vis
+python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --vis
 
 date

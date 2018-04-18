@@ -13,4 +13,4 @@
 
 source activate voxelnet_cpu
 
-python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --vis
+python /home/b.weinstein/voxelnet/train.py --alpha 1 --beta 10 --tag cpu --vis

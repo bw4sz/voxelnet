@@ -1,4 +1,3 @@
-]
 #!/usr/bin/env python
 # -*- coding:UTF-8 -*-
 
@@ -19,12 +18,12 @@ __C = edict()
 cfg = __C
 
 # for dataset dir
-__C.DATA_DIR = '/ufrc/ewhite/b.weinstein/voxelnet_split/training/'
+__C.DATA_DIR = '/ufrc/ewhite/b.weinstein/voxelnet_split/'
 __C.CALIB_DIR = '/ufrc/ewhite/b.weinstein/training/calib'
 
 
 # for gpu allocation
-__C.GPU_AVAILABLE = '0,1'
+__C.GPU_AVAILABLE = '0'
 __C.GPU_USE_COUNT = len(__C.GPU_AVAILABLE.split(','))
 __C.GPU_MEMORY_FRACTION = 1
 

@@ -1,12 +1,15 @@
 #!/bin/bash
+#SBATCH --account=ewhite
 #SBATCH --job-name=jupyter
-#SBATCH --output=jupyter_%j.log
+#SBATCH --output=/home/b.weinstein/logs/jupyter.log
 #SBATCH --ntasks=2
 #SBATCH --mem=4gb
 #SBATCH --time=04:00:00
+#SBATCH --error=/home/b.weinstein/logs/jupyter.err
+
 date;hostname;pwd
 
-module add python
+source activate voxelnet
 export XDG_RUNTIME_DIR=${TMPDIR}
 
 port=$(shuf -i 20000-30000 -n 1)

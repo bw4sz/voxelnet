@@ -18,8 +18,6 @@ from utils.kitti_loader import iterate_data, sample_test_data
 from train_hook import check_if_should_pause
 
 
-
-
 parser = argparse.ArgumentParser(description='training')
 parser.add_argument('-i', '--max-epoch', type=int, nargs='?', default=160,
                     help='max epoch')

@@ -1,15 +1,15 @@
 conda create -n voxelnet python=3.6
 source activate voxelnet
-conda install numpy
-conda install numba shapely scipy
+conda install numba shapely scipy numpy Pillow pandas matplotlib
 conda install -c menpo opencv
 conda install -c anaconda cython
-conda install Pillow
-conda install pandas
-conda install -c anaconda tensorflow-gpu
-#or pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.7.0-cp36-cp36m-linux_x86_64.whl
-conda install matplotlib
 conda install -c conda-forge jupyterlab
+pip install easydict
+
+#Tensorflow, choose one
+#conda install -c anaconda tensorflow-gpu
+#or pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.7.0-cp36-cp36m-linux_x86_64.whl
+conda install -c conda-forge tensorflow
 
 #edited the setup.py to capture numpy array
 python3 setup.py build_ext --inplace

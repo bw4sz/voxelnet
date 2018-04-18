@@ -22,7 +22,7 @@ from train_hook import check_if_should_pause
 parser = argparse.ArgumentParser(description='training')
 parser.add_argument('-i', '--max-epoch', type=int, nargs='?', default=160,
                     help='max epoch')
-parser.add_argument('-n', '--tag', type=str, nargs='?', default='default',
+parser.add_argument('-n', '--tag', type=str, nargs='?', default="default",
                     help='set log tag')
 parser.add_argument('-b', '--single-batch-size', type=int, nargs='?', default=2,
                     help='set batch size')
@@ -38,7 +38,8 @@ parser.add_argument('-v', '--vis', type=bool, nargs='?', default=False,
                     help='set the flag to True if dumping visualizations')
 args = parser.parse_args()
 
-
+if args.tag=="default":
+                    args.tag=datetime.datetime.now().strftime("%d_%b_%Y_%H_%M_%S")
 dataset_dir = cfg.DATA_DIR
 train_dir = os.path.join(cfg.DATA_DIR, 'training')
 val_dir = os.path.join(cfg.DATA_DIR, 'validation')

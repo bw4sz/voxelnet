@@ -9,7 +9,7 @@
 
 date;hostname;pwd
 
-source activate voxelnet
+source activate voxelnet_cpu
 export XDG_RUNTIME_DIR=${TMPDIR}
 
 port=$(shuf -i 20000-30000 -n 1)

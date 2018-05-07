@@ -22,6 +22,8 @@ ml cuda
 
 python /home/b.weinstein/voxelnet/test.py --tag 18_Apr_2018_15_02_03
 
+ml boost
+
 /home/b.weinstein/voxelnet/kitti_eval/evaluate_object_3d_offline /ufrc/ewhite/b.weinstein/voxelnet_split/validation/label_2/ ./predictions
 
 date
